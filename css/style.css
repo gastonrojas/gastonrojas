@@ -1,0 +1,200 @@
+/* Estilos generales - reset */
+html {
+  font-size: 16px;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+/* Estilo y Grid-layout del header */
+.header {
+  background-image: linear-gradient(#7fff00, #31580a);
+  display: grid;
+  grid-template-columns: 90px 3fr 5fr 3fr 2fr 1fr;
+  grid-template-rows: 90px;
+  grid-template-areas: "logo titulo nav nav search access";
+}
+
+/* Elementos y grid areas del header */
+.header__logo {
+  grid-area: logo;
+  align-self: center;
+}
+.header__logo img {
+  width: 80px;
+}
+.header__title {
+  grid-area: titulo;
+  color: yellow;
+  align-self: center;
+  font-size: 1.7em;
+}
+.header__nav {
+  align-self: center;
+  grid-area: nav;
+}
+.header__nav ul {
+  list-style: none;
+}
+.header__nav ul li {
+  display: inline-block;
+  padding-left: 15px;
+}
+.nav__item {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+.nav__item:hover {
+  color: yellow;
+  transition: 1.2s;
+  font-size: 1.3em;
+}
+.nav__item--active {
+  font-weight: 700;
+}
+.header form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.header__searchbar {
+  border: 1px solid black;
+  grid-area: search;
+  width: 200px;
+  height: 30px;
+  border-radius: 15px;
+}
+.header__access {
+  grid-area: access;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+}
+.button {
+  width: 85px;
+  height: 33px;
+  background-color: transparent;
+  margin: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.access__button--login {
+  color: yellow;
+  border: solid 1px yellow;
+}
+.access__button--login:hover {
+  background-color: yellow;
+  color: green;
+}
+.access__button--register {
+  color: rgb(1, 1, 114);
+  border: solid 1px rgb(1, 1, 114);
+}
+.access__button--register:hover {
+  background-color: rgb(1, 1, 114);
+  color: ivory;
+}
+
+/* Estilo y layout del main-area del index*/
+
+.main {
+  font-weight: 800;
+  color: green;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 150px 4fr 3fr;
+  grid-template-areas:
+    ". hero ."
+    ". hero info"
+    ". orders promo";
+}
+.main__hero {
+  grid-area: hero;
+}
+.main__orders {
+  grid-area: orders;
+}
+.main__info {
+  grid-area: info;
+}
+.main__discount {
+  grid-area: promo;
+}
+
+/* estilo y flex del footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(#31580a, #7fff00);
+  color: yellow;
+  font-weight: 600;
+}
+.footer div:hover {
+  transition: 1.2s;
+  font-size: 1.4em;
+}
+
+/* Flexbox y estilo pagina de productos */
+.products {
+  font-weight: 800;
+  color: green;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.productos {
+  margin: 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  max-height: 200vh;
+}
+.producto {
+  width: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.producto img {
+  max-width: 100%;
+}
+.producto .text {
+  padding: 0 20px 20px;
+}
+.producto .text > button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+.producto .text > button:hover {
+  background: green;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+/* seccion de cursos(en desarrollo) */
+.curses {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+/* seccion de login */
+.loger {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 150px;
+}
